@@ -1,0 +1,257 @@
+body {
+  background-color: #F6F6F6;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+/*_______TITLE_______*/
+#title {
+  font-family: Chewy;
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+/*______FLAG______*/
+img.ri {
+  position: absolute;
+  max-width: 100%;
+  left: 45%;
+}
+
+.flag-section {
+  margin: 0 auto;
+  position: relative;
+}
+
+#image
+, #image2
+ {
+  position: absolute;
+  left: 3%;
+  top: 6em;
+}
+
+#image
+ {
+  z-index: 0;
+}
+
+#flag-iamge2 {
+  z-index: 1;
+}
+
+#img-caption, 
+.quote,
+.link {
+  font-family: Oswald;
+}
+
+#img-caption {
+  position: absolute;
+  top: 33em;
+  width: 97vw;
+}
+
+hr {
+  border: 4px solid #fceb00;
+  border-radius: 5px;
+  width: 600px;
+  position: relative;
+}
+
+/*______TIMELINE______*/
+.timeline-container {
+  box-sizing: border-box;
+  background-color: #373d48;
+  margin-top: 40em;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 30%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -50px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid;
+  box-shadow: 2px 28px 43px 0px rgba(0,0,0,0.52);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 200px;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -30px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 2px 14px 47px 1px rgba(0,0,0,0.71);
+}
+
+.quote {
+  margin-bottom: 200px;
+  font-size: 1.3em;
+}
+
+.container.green::after {
+  background-color: #adebb4;
+}
+
+.container.red::after {
+  background-color: #ff9999;
+}
+
+.container.yellow::after {
+  background-color: #fbe49d;
+}
+
+.container.frida::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322831/fridaIcon_opt_msge6f.png");
+}
+
+.container.health::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322831/health_opt_sadbkv.png");
+}
+
+.container.school::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322836/school_opt_xim9ep.png");
+}
+
+.container.paintbrush::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322832/paintbrush_opt_wfumqn.png");
+}
+
+.container.communist::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322831/communistparty_opt_vh8njt.png");
+}
+
+.container.marriage::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322832/marriage_opt_uo8k7a.png");
+}
+
+.container.sanFran::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322833/sanfran_opt_k4ymgs.png");
+}
+
+.container.death::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322831/death3_opt_mpnjv6.png");
+}
+
+.container.mexico::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322832/mexico_opt_eunbmj.png");
+}
+
+.container.heartbreak::after {
+  background-image: url("https://res.cloudinary.com/dtncpw3yd/image/upload/v1561322832/heartbreak_opt_in55ri.png");
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+/* Place the timelime to the left */
+  .timeline::after, .left::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 80%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  } 
+
+/* Make all right containers behave like the left ones */
+  .left, .right {
+    left: 0%;
+  }
+}
